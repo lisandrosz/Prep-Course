@@ -53,13 +53,11 @@ function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
-  var comienzaConA = []
-  array.forEach(function(str){
-    if( str.startsWith("a")){
-      comienzaConA.push(str)
-    }
-  })
-  return comienzaConA
+  var comienzaConA = function(str){
+    return str.startsWith("a")
+  }
+  var cumple = (array.filter(comienzaConA)) 
+  return cumple
 }
 
 // No modificar nada debajo de esta línea
